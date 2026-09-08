@@ -1,0 +1,17 @@
+---
+import '@fontsource-variable/manrope';
+import '../styles/global.css';
+import {site,asset} from '../config/site';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import ServerStatus from '../components/ServerStatus.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import NoPayToWinSection from '../components/NoPayToWinSection.astro';
+import CommunityPreview from '../components/CommunityPreview.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+const canonical = Astro.site ? new URL(import.meta.env.BASE_URL,Astro.site).href : undefined;
+const title = 'BlokBuren SMP | Nederlandse Minecraft survival server';
+const jsonLd = { '@context':'https://schema.org', '@type':'WebSite', name:site.name, description:site.description, inLanguage:'nl-NL', ...(canonical ? {url:canonical} : {}) };
+---
+<!doctype html><html lang="nl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={site.description}/><meta name="robots" content={site.seo.indexable ? 'index,follow' : 'noindex,nofollow'}/><meta name="theme-color" content="#faf8f2"/><link rel="icon" type="image/png" href={asset('images/favicon.png')}/>{canonical && <link rel="canonical" href={canonical}/>}<meta property="og:type" content="website"/><meta property="og:locale" content="nl_NL"/><meta property="og:site_name" content={site.name}/><meta property="og:title" content={title}/><meta property="og:description" content={site.description}/>{canonical && <meta property="og:url" content={canonical}/>}<meta name="twitter:card" content="summary"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={site.description}/><script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g,'\\u003c')}/></head><body><a href="#inhoud" class="skip-link">Naar de inhoud</a><Navigation/><main id="inhoud"><Hero/><ServerStatus/><FeatureSection/><NoPayToWinSection/><CommunityPreview/></main><Footer/><Analytics/></body></html>
