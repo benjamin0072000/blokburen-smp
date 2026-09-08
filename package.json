@@ -1,0 +1,6 @@
+{
+  "name": "blokburen-smp", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": { "dev": "astro dev --host 127.0.0.1", "build": "astro build", "preview": "astro preview --host 127.0.0.1", "check": "astro check" },
+  "dependencies": { "astro": "^5.13.0", "@fontsource-variable/manrope": "^5.2.0" },
+  "devDependencies": { "@astrojs/check": "^0.9.4", "typescript": "^5.9.0" }
+}
