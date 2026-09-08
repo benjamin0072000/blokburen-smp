@@ -1,0 +1,16 @@
+---
+import {site, asset} from '../config/site';
+---
+<header class="header wrap">
+  <a class="brand" href={import.meta.env.BASE_URL} aria-label="BlokBuren SMP – home"><img src={asset(site.assets.logo)} alt="" width="48" height="48" /><span>BlokBuren<span class="brand-smp">SMP</span></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+  <nav id="main-nav" aria-label="Hoofdnavigatie"><a href={import.meta.env.BASE_URL} aria-current="page">Home</a><a href="#buurt">Over de server</a><a href="#ranks">Hoe het werkt</a><span class="nav-soon" aria-disabled="true">Regels <small>binnenkort</small></span><a href="#nieuws">Nieuws</a><a class="nav-discord" href={site.discord} target="_blank" rel="noopener noreferrer">Discord <span aria-hidden="true">↗</span></a></nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('#main-nav');
+  const closeMenu = () => { toggle?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); };
+  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('is-open', open); });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {closeMenu(); toggle.focus();} });
+</script>
