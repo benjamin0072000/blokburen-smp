@@ -2,7 +2,7 @@
 import {site} from '../config/site';
 const active = import.meta.env.PROD && site.analytics.enabled && /^G-[A-Z0-9]+$/.test(site.analytics.measurementId);
 ---
-{active && <aside class="consent" aria-label="Privacykeuze" data-id={site.analytics.measurementId} hidden><p>Mogen we met statistiekcookies meten hoe de site wordt gebruikt? Nee zeggen is prima.</p><button data-consent="yes">Toestaan</button><button data-consent="no">Nee, bedankt</button></aside>}
+{active && <aside class="consent" aria-label="Privacykeuze" data-id={site.analytics.measurementId} hidden><p>Met anonieme bezoekstatistieken helpen we de website verbeteren. Wil je statistiekcookies toestaan?</p><button data-consent="yes">Toestaan</button><button data-consent="no">Nee, bedankt</button></aside>}
 <script>
   const banner = document.querySelector<HTMLElement>('.consent');
   if(banner) {
