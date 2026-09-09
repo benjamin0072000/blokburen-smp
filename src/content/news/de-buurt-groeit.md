@@ -1,7 +1,7 @@
 ---
-title: "Jouw bouwwerk hier?"
-summary: "Van een knus starthuis tot een hele nederzetting. Hier krijgen de creaties van onze buren straks een plek."
-category: "UIT DE COMMUNITY"
+title: "Laat je build zien."
+summary: "Een starterbase, een dikke farm of een heel dorp: als de server open is, delen we hier builds van spelers. Die van jou kan er ook tussen staan."
+category: "BUILDS VAN SPELERS"
 order: 1
 preview: true
 ---
