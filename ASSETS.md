@@ -10,7 +10,7 @@ De homepage gebruikt de twee door de eigenaar aangeleverde screenshots van 9 sep
 - `public/images/buurt-dag.webp`: `2026-09-09_23.58.51.png`, zichtbaar in dagmodus.
 - `public/images/buurt-nacht.webp`: `2026-09-09_23.59.02.png`, zichtbaar in nachtmodus.
 
-Alleen verkleind naar 1600 pixels breed en gecomprimeerd naar WebP (quality 86). De inhoud is ongewijzigd. De foto's volgen hetzelfde thema als de rest van de site, inclusief de handmatige schakelknop.
+Alleen verkleind naar 1600 pixels breed en gecomprimeerd naar WebP (quality 86). De dagfoto is inhoudelijk ongewijzigd. De nachtfoto is met de ingebouwde imagegen-tool kleurgecorrigeerd naar diepblauwe schaduwen, warme amberverlichting en een cyaan beacon, passend bij het logo en de nachtmodus. De foto's volgen hetzelfde thema als de rest van de site, inclusief de handmatige schakelknop.
 
 ## Eerdere sfeerillustratie (niet meer getoond)
 
@@ -23,3 +23,7 @@ Gebruikte prompt:
 ## Lettertype
 
 Manrope, lokaal geleverd via @fontsource-variable/manrope (SIL Open Font License). Geen Google Fonts-netwerkverzoeken.
+
+### Nachtfoto: bewerkingsprompt
+
+Ingebouwde imagegen-tool, edit van de originele nachtscreenshot: subtiele kleurcorrectie richting navy #00062D in lucht, water en schaduwen; behoud warme amber/oranje verlichting (#FFAA00) en versterk bestaand cyaan beaconlicht (#55FFFF). Behoud compositie, gebouwen, pixelart, landschap en camerastand; voeg geen objecten toe.
