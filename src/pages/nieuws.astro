@@ -1,0 +1,11 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import {getCollection,render} from 'astro:content';
+import {site,asset} from '../config/site';
+const published = (await getCollection('news',({data})=>!data.preview)).sort((a,b)=>a.data.order-b.data.order);
+const articles = await Promise.all(published.map(async entry=>({...entry,...await render(entry)})));
+---
+<SiteLayout title="Nieuws | BlokBuren SMP" description="Serverupdates en verhalen uit de buurt. Lees het nieuws van BlokBuren SMP en deel je bouwwerken op Discord.">
+<div class="page-intro wrap"><a class="back-link" href={asset('')}>← Home</a><p class="eyebrow">HET PRIKBORD</p><h1>Nieuws uit<br/><span class="orange">de buurt.</span></h1><p>Serverupdates, nieuwe bouwwerken en verhalen van spelers. Hier verzamelen we de berichten van BlokBuren.</p></div>
+<div class="wrap news-list">{articles.length ? articles.map(({data,id,Content})=><article class="news-article" id={id}><p class="eyebrow">{data.category}</p><h2>{data.title}</h2><p class="news-summary">{data.summary}</p><div class="article-body"><Content/></div></article>) : <section class="news-empty"><span class="map-symbol" aria-hidden="true">▤</span><p class="eyebrow">BINNENKORT OP HET PRIKBORD</p><h2>Het eerste bericht volgt.</h2><p>Er zijn nog geen nieuwsberichten op de website gepubliceerd. Zodra er een update klaarstaat, kun je die hier lezen. Voor nu praten we verder op Discord.</p><a class="button" href={site.discord} target="_blank" rel="noopener noreferrer">Naar Discord <span aria-hidden="true">↗</span></a></section>}</div>
+<section class="wrap detail-section split-detail"><div><p class="eyebrow">UIT DE COMMUNITY</p><h2>Heb jij iets om te laten zien?</h2><p>Een nieuwe winkel, een bouwproject of een bijzonder hoekje in jullie dorp: deel het op Discord. Vertel erbij wat je hebt gebouwd en stuur een screenshot mee.</p><a class="text-link" href={site.discord} target="_blank" rel="noopener noreferrer">Deel je bouwwerk ↗</a></div><div class="detail-panel"><h3>Zoek je uitleg?</h3><p>De spelersgids legt uit hoe claims, shops en nederzettingen werken. De afspraken voor iedereen vind je bij de regels.</p><a class="text-link" href={asset('hoe-het-werkt/')}>Naar de spelersgids →</a><br/><a class="text-link" href={asset('regels/')}>Lees de regels →</a></div></section></SiteLayout>
