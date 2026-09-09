@@ -1,8 +1,8 @@
 ---
 const features = [
-  {number:'01', symbol:'⌖', title:'Jouw stukje wereld.', text:'Claim je land en bouw met een gerust hart. Je huis, spullen en dieren zijn beschermd. Samen bouwen? Geef je buren toegang.', tag:'Bouwen zonder zorgen'},
-  {number:'02', symbol:'⇄', title:'Van oogst naar handel.', text:'Mijnen, vissen of je akker bijhouden: je bouwt vanzelf een saldo op. Koop en verkoop bij de shops van andere spelers.', tag:'Een economie van spelers'},
-  {number:'03', symbol:'＋', title:'Buren, geen nummers.', text:'Begin je eigen basis, bezoek een ander of bouw samen iets groots. Hier leer je de spelers achter de bouwwerken kennen.', tag:'Op jezelf. Met elkaar.'},
+  {number:'01', symbol:'⌖', title:'Claim je base.', text:'Geen zin dat iemand je base sloopt? Claim je grond. Je kisten, dieren en builds zijn beschermd. Je maten geef je zelf toegang.', tag:'Grief-free claims'},
+  {number:'02', symbol:'⇄', title:'Verkoop je loot.', text:'Je verdient geld met minen, vissen en farmen. Koop spullen bij andere spelers of open zelf een shop voor je extra loot.', tag:'Player Shops'},
+  {number:'03', symbol:'＋', title:'Speel op jouw manier.', text:'Liever in je eentje bouwen? Prima. Samen een dorp uit de grond stampen? Ook goed. Loop eens bij een ander langs of haak aan op Discord.', tag:'Solo & co-op'},
 ];
 ---
-<section id="buurt" class="features wrap section-space"><div class="section-heading"><div><p class="eyebrow">WELKOM IN DE BUURT</p><h2>Gewoon survival.<br/>Met goede buren.</h2></div><p>Een ontspannen Nederlandse community.<br/>Jij bepaalt wat je bouwt. Wij zorgen voor een fijne plek om dat te doen.</p></div><div class="feature-grid">{features.map(f => <article class="feature"><div class="feature-top"><span class="pixel-symbol" aria-hidden="true">{f.symbol}</span><span class="feature-number">/{f.number}</span></div><h3>{f.title}</h3><p>{f.text}</p><span class="feature-tag">{f.tag}</span></article>)}</div></section>
+<section id="buurt" class="features wrap section-space"><div class="section-heading"><div><p class="eyebrow">DIT KUN JE HIER DOEN</p><h2>Minen. Bouwen.<br/>En weer doorgaan.</h2></div><p>We houden het bij survival.<br/>Met claims, shops en spelers die gewoon zin hebben om te spelen.</p></div><div class="feature-grid">{features.map(f => <article class="feature"><div class="feature-top"><span class="pixel-symbol" aria-hidden="true">{f.symbol}</span><span class="feature-number">/{f.number}</span></div><h3>{f.title}</h3><p>{f.text}</p><span class="feature-tag">{f.tag}</span></article>)}</div></section>
