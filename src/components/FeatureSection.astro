@@ -1,4 +1,5 @@
 ---
+import {site} from '../config/site';
 const features = [
   {number:'01', symbol:'⌖', title:'Jouw stukje wereld.', text:'Claim je land en bouw met een gerust hart. Je huis, spullen en dieren zijn beschermd. Samen bouwen? Geef je buren toegang.', tag:'Bouwen zonder zorgen'},
   {number:'02', symbol:'⇄', title:'Van oogst naar handel.', text:'Mijnen, vissen of je akker bijhouden: je bouwt vanzelf een saldo op. Koop en verkoop bij de shops van andere spelers.', tag:'Een economie van spelers'},
@@ -6,3 +7,20 @@ const features = [
 ];
 ---
 <section id="buurt" class="features wrap section-space"><div class="section-heading"><div><p class="eyebrow">WELKOM IN DE BUURT</p><h2>Gewoon survival.<br/>Met goede buren.</h2></div><p>Een ontspannen Nederlandse community.<br/>Jij bepaalt wat je bouwt. Wij zorgen voor een fijne plek om dat te doen.</p></div><div class="feature-grid">{features.map(f => <article class="feature"><div class="feature-top"><span class="pixel-symbol" aria-hidden="true">{f.symbol}</span><span class="feature-number">/{f.number}</span></div><h3>{f.title}</h3><p>{f.text}</p><span class="feature-tag">{f.tag}</span></article>)}</div></section>
+
+<section id="nederzettingen" class="settlement wrap" aria-labelledby="settlement-title">
+  <div class="settlement-copy">
+    <p class="eyebrow">JOUW DORP, JULLIE VERHAAL</p>
+    <h2 id="settlement-title">Van een eerste huis.<br/>Naar je eigen nederzetting.</h2>
+    <p>Start je eigen nederzetting en nodig andere spelers uit voor je dorp. Met een eigen dorpswarp vinden je buren de weg naar jullie plek.</p>
+    <p>Burgers, Builders en Oprichters: samen maken jullie er een dorp van waar je graag terugkomt.</p>
+    <ul class="village-features" aria-label="Nederzettingen"><li>Een eigen dorpswarp</li><li>Spelers uitnodigen voor je dorp</li><li>Burgers, Builders en Oprichters</li></ul>
+  </div>
+  <aside class="map-card" aria-labelledby="map-title">
+    <span class="map-symbol" aria-hidden="true">⌖</span>
+    <p class="eyebrow">DE WERELD VAN BLOKBUREN</p>
+    <h3 id="map-title">Waar ligt jullie dorp?</h3>
+    <p>Bekijk straks de wereld en jullie bouwwerken in 3D op BlueMap.</p>
+    {site.bluemap ? <a class="button" href={site.bluemap} target="_blank" rel="noopener noreferrer">Open BlueMap <span aria-hidden="true">↗</span></a> : <button class="button map-pending" type="button" disabled>BlueMap <span>binnenkort</span></button>}
+  </aside>
+</section>
