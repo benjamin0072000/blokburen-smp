@@ -1,0 +1,5 @@
+---
+interface Props {title: string; caption: string;}
+const {title,caption} = Astro.props;
+---
+<figure class="photo-placeholder"><div class="placeholder-scene"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="2"/><circle cx="16" cy="19" r="4"/><path d="m6 34 11-9 8 7 8-12 10 13"/></svg><strong>{title}</strong><span>In-game screenshot volgt</span></div><figcaption>{caption}</figcaption></figure>
