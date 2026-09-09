@@ -1,6 +1,6 @@
 # BlokBuren SMP
 
-De eerste homepage van BlokBuren SMP. Astro 5, TypeScript, eigen CSS en lokaal gehost Manrope. Geen UI-framework, CMS of JavaScript-framework. Alleen de homepage is gebouwd; navigatie naar serverinformatie, ranks en nieuws verwijst voorlopig naar secties op die pagina. Regels is als binnenkort gemarkeerd.
+De eerste homepage van BlokBuren SMP. Astro 5, TypeScript, eigen CSS en lokaal gehost Manrope. Geen UI-framework, CMS of JavaScript-framework. De homepage heeft vier detailpagina’s: `/over-de-server/`, `/hoe-het-werkt/`, `/regels/` en `/nieuws/`. De gedeelde navigatie gebruikt echte routes en markeert de huidige pagina.
 
 ## Lokaal werken
 
@@ -38,7 +38,7 @@ Open het lokale adres dat Astro toont. De productie-uitvoer staat in `dist/`. Te
 
 ## Nieuws
 
-Nieuwsinhoud staat in `src/content/news/*.md`. Astro Content Collections valideert title, summary, category, order en preview. De homepage gebruikt één compacte voorvertoning. Het huidige bericht is duidelijk toekomstig en bevat geen verzonnen gebeurtenissen. Er zijn nog geen losse nieuwsdetailpagina's.
+Nieuwsinhoud staat in `src/content/news/*.md`. Astro Content Collections valideert title, summary, category, order en preview. De homepage gebruikt één compacte voorvertoning. Het huidige bericht is duidelijk toekomstig en bevat geen verzonnen gebeurtenissen. De nieuwspagina toont alleen berichten met `preview: false`, inclusief de Markdown-inhoud. Zolang die ontbreken verschijnt een lege nieuwsstaat zonder fictieve berichten.
 
 Ranks staan los van de weergave in `src/data/ranks.ts`; de homepage toont alleen een teaser. Er is bewust geen volledige spelersslideshow gebouwd.
 
@@ -63,4 +63,12 @@ Gebruik semantische HTML, zichtbare toetsenbordfocus, een skiplink en een mobiel
 
 ## Scope
 
-Geen overige pagina's, webshop, donaties, login, CMS, voting, BlueMap of profielen. Die kunnen na goedkeuring van de homepage als afzonderlijke routes worden toegevoegd.
+Homepage en vier informatiepagina’s. Geen webshop, donaties, login, CMS, voting of profielen. De BlueMap-knop wordt actief na het invullen van de kaart-URL.
+
+## Detailpagina’s onderhouden
+
+`src/layouts/SiteLayout.astro` deelt metadata, dag-/nachtmodus, navigatie en footer. `src/styles/pages.css` bevat de aanvullende paginaopmaak. De homepagecomponenten en hun inhoud zijn behouden.
+
+`PhotoPlaceholder.astro` toont expliciete screenshotplaatsen voor claims, shops, nederzettingen en BlueMap. Vervang die later door aangeleverde screenshots met een passende alt-tekst; gebruik vaste breedte/hoogte en lazy loading.
+
+De regels zijn overgenomen uit de bestaande `Essentials/rules.txt`. Werk de website en server samen bij wanneer beleid verandert. De spelersgids gebruikt de huidige pluginconfig en het definitieve reisbeleid; oude welkomstboektekst kan afwijken.
