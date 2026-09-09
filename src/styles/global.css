@@ -51,3 +51,29 @@
 @media(max-width:850px){.theme-toggle{order:0;margin-left:auto}.header{gap:12px}}
 @media(max-width:360px){.header{gap:8px}.header .brand{gap:6px;font-size:1rem}.header .brand-smp{margin-left:4px;padding-left:4px}.menu-toggle{padding:10px;gap:7px}.theme-toggle{width:36px;height:40px}}
 }
+
+@layer components {
+.hero-night{display:none}
+[data-theme="dark"] .hero-day{display:none}
+[data-theme="dark"] .hero-night{display:block}
+.settlement{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;padding-bottom:76px}
+.settlement-copy>.eyebrow{color:var(--orange-text);margin-bottom:15px}
+.settlement-copy>p:not(.eyebrow){font-size:.82rem;color:var(--muted);max-width:520px;margin-top:18px}
+.village-features{list-style:none;padding:0;margin:23px 0 0;display:flex;flex-wrap:wrap;gap:10px 18px;font-size:.68rem;font-weight:700}
+.village-features li:before{content:'✓';color:#287128;margin-right:7px}
+.map-card{padding:30px;background:#eaffff;border:1px solid #bcdddd;border-radius:7px}
+.map-symbol{display:block;color:#006b6b;font-size:2.4rem;margin-bottom:14px}
+.map-card .eyebrow{color:#006b6b;margin-bottom:12px;font-size:.57rem}
+.map-card>p:not(.eyebrow){font-size:.8rem;color:var(--muted);margin-top:13px;max-width:340px}
+.map-card .button{margin-top:23px}
+.map-pending:disabled{cursor:default;transform:none;box-shadow:none;background:transparent;border-color:#81958f;color:#485e59}
+.map-pending>span{font-size:.65rem;font-weight:500}
+[data-theme="dark"] .map-card{background:#0b243b;border-color:#25526b}
+[data-theme="dark"] .map-card :is(.eyebrow,.map-symbol){color:var(--cyan)}
+[data-theme="dark"] .map-pending:disabled{color:#b3bed9;border-color:#536782;background:transparent}
+[data-theme="dark"] .village-features li:before{color:var(--lime)}
+}
+@layer responsive {
+@media(max-width:850px){.settlement{gap:30px;grid-template-columns:1.1fr 1fr}.map-card{padding:24px}}
+@media(max-width:620px){.settlement{grid-template-columns:1fr;gap:26px;padding-bottom:47px}.settlement h2{font-size:2.1rem}.village-features{flex-direction:column}.map-card .button{width:100%}}
+}
