@@ -30,7 +30,9 @@ Open het lokale adres dat Astro toont. De productie-uitvoer staat in `dist/`. Te
 
 - `public/images/logo.png`: het gevonden bestaande logo met twee huizen, geoptimaliseerd naar 128 × 128. Vervang dit bestand door het echte vierkante logo als er een nieuwere versie is.
 - `public/images/favicon.png`: kleine variant van datzelfde logo, 64 × 64.
-- `public/images/buurt.webp`: fictieve sfeerillustratie, uitdrukkelijk geen screenshot van de server. Vervang dit bestand door een eigen screenshot. Zet dan `assets.heroIsIllustration: false`. Pas de alt-tekst in Hero.astro aan als de inhoud sterk afwijkt.
+- `public/images/buurt-dag.webp` en `buurt-nacht.webp`: echte serverscreenshots; volgen de dag-/nachtmodus.
+- `site.bluemap` in `src/config/site.ts`: vul de publieke BlueMap-URL in om de knop te activeren.
+- Rankup levert extra personal claims op, geen extra homes. Exacte claimlimieten zijn nog niet vastgelegd op de website.
 - Plaats toekomstige echte screenshots in `public/images/`. Comprimeer bij voorkeur als WebP en geef vaste beeldafmetingen op.
 - Herkomst en illustratieprompt staan in `ASSETS.md`.
 

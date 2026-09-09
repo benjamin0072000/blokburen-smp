@@ -4,9 +4,17 @@
 
 Het door de gebruiker eerder opgeslagen `BlokBuren-SMP-icon-source.png` is hergebruikt. Het toont twee huizen met warme en aqua daken. Voor de website zijn uitsluitend kleinere bestandvarianten gemaakt; er is geen nieuw definitief logo ontworpen.
 
-## Sfeerillustratie
+## Echte serverscreenshots
 
-`public/images/buurt.webp` is één AI-gegenereerde fictieve Minecraft-buurt, gemaakt met de ingebouwde image_gen-tool. Dit beeld is geen echte serverscreenshot. Het bijschrift maakt dat zichtbaar. Geoptimaliseerd naar 1400 pixels breed met WebP quality 82.
+De homepage gebruikt de twee door de eigenaar aangeleverde screenshots van 9 september 2026:
+- `public/images/buurt-dag.webp`: `2026-09-09_23.58.51.png`, zichtbaar in dagmodus.
+- `public/images/buurt-nacht.webp`: `2026-09-09_23.59.02.png`, zichtbaar in nachtmodus.
+
+Alleen verkleind naar 1600 pixels breed en gecomprimeerd naar WebP (quality 86). De inhoud is ongewijzigd. De foto's volgen hetzelfde thema als de rest van de site, inclusief de handmatige schakelknop.
+
+## Eerdere sfeerillustratie (niet meer getoond)
+
+`public/images/buurt.webp` is één AI-gegenereerde fictieve Minecraft-buurt, gemaakt met de ingebouwde image_gen-tool. Dit beeld is geen echte serverscreenshot. Deze illustratie is vervangen door de echte screenshots. Geoptimaliseerd naar 1400 pixels breed met WebP quality 82.
 
 Gebruikte prompt:
 
